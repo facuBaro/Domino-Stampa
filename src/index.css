@@ -1,0 +1,43 @@
+*{
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+:root {
+  /* Tipografía global */
+  --fuente-principal: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+
+  /* Encabezado y Pie de página */
+  --fondo-encabezado: #0f172a;       /* Azul noche para Header y Footer */
+  --texto-encabezado: #f8fafc;       /* Texto claro para Header y Footer */
+  
+  /* Colores principales de interacción (Botones, Links, Destacados) */
+  --color-primario: #2563eb;         /* Azul cobalto principal */
+  --color-primario-hover: #1d4ed8;   /* Azul más oscuro para efecto hover */
+  
+  /* Fondos generales */
+  --fondo-principal: #f8fafc;        /* Fondo claro del main */
+  --fondo-tarjeta: #ffffff;          /* Fondo blanco para las tarjetas del catálogo */
+  
+  /* Textos y bordes */
+  --texto-principal: #1e293b;        /* Texto oscuro para títulos y contenido */
+  --texto-secundario: #64748b;       /* Texto gris para subtítulos y descripciones */
+  --color-borde: #e2e8f0;            /* Borde claro para tarjetas e inputs */
+}
+/* index.css o App.css */
+
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  overflow-x: clip; 
+}
+
+#root, .App, main {
+  width: 100%;
+  overflow: visible; 
+}
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 100px; 
+}

@@ -1,0 +1,23 @@
+.contenedor-layout{
+    display: grid;
+    grid-template-areas: 
+    "header"
+    "hero"
+    "main";
+    grid-template-rows: auto auto 1fr auto;
+    min-height: 100vh;
+}
+.layout-header {
+  grid-area: header;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  align-self: start; /* Evita que el grid estire la celda hacia abajo */
+}
+.layout-hero{
+    grid-area: hero;
+}
+.layout-main{
+    grid-area: main;
+    background-color: var(--fondo-principal);
+}

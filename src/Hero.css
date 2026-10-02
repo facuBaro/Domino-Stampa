@@ -1,0 +1,41 @@
+/* src/Hero.css */
+
+.hero-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 90px 20px;
+  background: radial-gradient(
+    circle at center, 
+    rgba(37, 99, 235, 0.15) 0%, 
+    transparent 70%
+  ), var(--fondo-encabezado);
+  border-bottom: 1px solid var(--color-borde);
+}
+
+/* Título con presencia e impacto */
+.hero-titulo {
+  font-size: 3.8rem;
+  font-weight: 800;
+  letter-spacing: -1.5px;
+  margin: 0;
+  line-height: 1.1;
+  color: var(--texto-encabezado);
+  
+  /* Sombra sutil para dar profundidad sobre el fondo */
+  text-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+  cursor: default;
+}
+
+/* --- ADAPTACIÓN RESPONSIVE --- */
+@media (max-width: 768px) {
+  .hero-container {
+    padding: 60px 16px;
+  }
+
+  .hero-titulo {
+    font-size: 2.4rem;
+    letter-spacing: -0.5px;
+  }
+}

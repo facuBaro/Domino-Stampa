@@ -1,0 +1,118 @@
+
+
+/* src/Catalog.css */
+
+.catalogo-seccion {
+  width: 100%;
+  max-width: 1280px;
+  /* Eliminamos el padding vertical excesivo y usamos margin controlado */
+  margin: 0 auto;
+  padding: 20px 20px 60px 20px; 
+  box-sizing: border-box;
+}
+
+.catalogo-titulo {
+  text-align: center;
+  font-size: 2.2rem;
+  font-weight: 800;
+  color: var(--texto-principal);
+  /* Reducimos el margen superior del título por si estaba empujando */
+  margin-top: 10px;
+  margin-bottom: 32px;
+  letter-spacing: -0.5px;
+}
+
+/* Grilla responsive flexible */
+.catalogo-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 24px;
+  width: 100%;
+}
+
+/* Tarjeta individual */
+.tarjeta-producto {
+  background-color: var(--fondo-encabezado);
+  border: 1px solid var(--color-borde);
+  border-radius: 12px;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+.tarjeta-producto:hover {
+  transform: translateY(-5px);
+  border-color: var(--color-primario);
+  box-shadow: 0 8px 24px rgba(37, 99, 235, 0.25);
+}
+
+/* Etiqueta con el número (#1, #2, etc.) */
+.producto-numero {
+  align-self: flex-start;
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: #60a5fa; /* Azul claro brillante */
+  background-color: rgba(37, 99, 235, 0.15);
+  border: 1px solid rgba(59, 130, 246, 0.3);
+  padding: 4px 10px;
+  border-radius: 6px;
+  margin-bottom: 12px;
+}
+
+/* Marco contenedor de la foto (Previene que se rompa el tamaño) */
+.producto-imagen-contenedor {
+  width: 100%;
+  height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+  background-color: rgba(255, 255, 255, 0.03);
+  overflow: hidden;
+  padding: 8px;
+  box-sizing: border-box;
+}
+
+/* Ajuste estricto de la foto dentro del marco */
+.producto-imagen {
+  max-width: 100%;
+  max-height: 100%;
+  width: auto;
+  height: auto;
+  object-fit: contain; /* Mantiene la proporción sin deformar ni estirar */
+  display: block;
+  border-radius: 4px;
+}
+
+/* Descripción inferior */
+.producto-descripcion {
+  margin-top: 14px;
+  margin-bottom: 0;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--texto-encabezado);
+  text-align: center;
+  line-height: 1.3;
+}
+
+/* --- ADAPTACIÓN A CELULARES --- */
+@media (max-width: 600px) {
+  .catalogo-grid {
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 16px;
+  }
+
+  .producto-imagen-contenedor {
+    height: 150px;
+  }
+
+  .producto-descripcion {
+    font-size: 0.82rem;
+  }
+}
